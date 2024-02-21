@@ -1,0 +1,10 @@
+{
+  "name": "EvolutionEquipment",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/schinchi/EvolutionEquipment",
+  "description": "Enemies get an equipment with the Artifact of Evolution and in Simulacrum",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2113",
+    "RiskofThunder-HookGenPatcher-1.2.3"
+  ]
+}
