@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Chinchi</Authors>
     <Description>Enemies get an equipment with the Artifact of Evolution and in Simulacrum</Description>
 	<RepositoryUrl>https://github.com/schinchi/EvolutionEquipment</RepositoryUrl>

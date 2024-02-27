@@ -168,6 +168,7 @@ namespace EvolutionEquipment
                     tooltip.titleToken = equip.nameToken;
                     tooltip.bodyToken = equip.descriptionToken;
                     enemyInfoPanel.Item1.SetActive(true);
+                    RoR2Application.onNextUpdate += RefreshPanelPosition;
                 }
                 else
                 {
@@ -187,6 +188,17 @@ namespace EvolutionEquipment
                     return RoR2.Artifacts.MonsterTeamGainsItemsArtifactManager.monsterTeamInventory;
                 }
                 return null;
+            }
+        }
+
+        private static void RefreshPanelPosition()
+        {
+            foreach (var panel in enemyInfoPanels.Values)
+            {
+                if (panel.Item1.activeSelf)
+                {
+                    LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)panel.Item1.transform.parent);
+                }
             }
         }
 
