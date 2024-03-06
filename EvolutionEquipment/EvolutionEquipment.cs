@@ -18,7 +18,7 @@ namespace EvolutionEquipment
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "Chinchi";
         public const string PluginName = "EvolutionEquipment";
-        public const string PluginVersion = "1.0.1";
+        public const string PluginVersion = "1.0.2";
 
         internal static new ManualLogSource Logger;
 
@@ -99,7 +99,8 @@ namespace EvolutionEquipment
                     // so that "FireEquipment" has priority
                     foreach (var driver in skillDrivers)
                     {
-                        var copy = ai.gameObject.AddComponent<AISkillDriver>();
+                        // The AISkillDriver can be subclassed so we can't rely on generics
+                        var copy = ai.gameObject.AddComponent(driver.GetType());
                         foreach (var field in driver.GetType().GetFields())
                         {
                             field.SetValue(copy, field.GetValue(driver));
