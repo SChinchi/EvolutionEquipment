@@ -18,7 +18,7 @@ namespace EvolutionEquipment
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "Chinchi";
         public const string PluginName = "EvolutionEquipment";
-        public const string PluginVersion = "1.0.2";
+        public const string PluginVersion = "1.0.3";
 
         internal static new ManualLogSource Logger;
 
@@ -105,7 +105,7 @@ namespace EvolutionEquipment
                         {
                             field.SetValue(copy, field.GetValue(driver));
                         }
-                        Destroy(driver);
+                        DestroyImmediate(driver);
                     }
                 }
             }
