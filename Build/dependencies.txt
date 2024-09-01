@@ -1,2 +1,2 @@
-bbepis-BepInExPack-5.4.2114
+bbepis-BepInExPack-5.4.2117
 RiskofThunder-HookGenPatcher-1.2.3
